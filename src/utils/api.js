@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { auth } from './firebase'
 
-const API_BASE = 'http://localhost:8000'
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000'
 
 const api = axios.create({
   baseURL: API_BASE,
@@ -68,7 +68,8 @@ export const createWebSocket = async () => {
   if (user) {
     token = await user.getIdToken()
   }
-  return new WebSocket(`ws://localhost:8000/ws/query?token=${token}`)
+  const WS_BASE = import.meta.env.VITE_WS_URL || 'ws://localhost:8000'
+  return new WebSocket(`${WS_BASE}/ws/query?token=${token}`)
 }
 
 export const deleteHistory = async () => {
