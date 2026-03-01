@@ -319,9 +319,9 @@ marginTop: "2rem"
         )}
 
         {/* Footer */}
-        <div style={{ position: "absolute", bottom: "1.5rem", fontFamily: F, fontWeight: 400, fontSize: "0.68rem", color: "rgba(255,255,255,0.18)" }}>
-          Built with LangGraph · FAISS · HuggingFace · FastAPI
-        </div>
+<div style={{ fontFamily: F, fontWeight: 400, fontSize: "0.68rem", color: "rgba(255,255,255,0.18)", marginTop: "1rem", paddingBottom: "1rem" }}>
+  Built with LangGraph · FAISS · HuggingFace · FastAPI
+</div>
 
       </div>
 
